@@ -17,8 +17,20 @@ public class admin {
 	blooddetailsRepo repo;
 	
 	@PostMapping("/addDetails")
-	public void addDetails(@RequestBody blooddetails md)
+	public String addDetails(@RequestBody blooddetails md)
 	{
-		repo.save(md);
+		try
+		{
+			repo.save(md);
+			return "Success";
+		}
+		catch(Exception e)
+		{
+			
+			e.printStackTrace();
+			return "fail";
+		}
+		
+		
 	}
 }
