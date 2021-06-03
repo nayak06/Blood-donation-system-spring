@@ -22,13 +22,13 @@ public class admin {
 		try
 		{
 			repo.save(md);
-			return "Success";
+			return "Add Successfully";
 		}
 		catch(Exception e)
 		{
 			
 			e.printStackTrace();
-			return "fail";
+			return "Something Went Wrong";
 		}
 		
 		
